@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: alarm
+  datasource:
+    url: jdbc:sqlite:alarm.db
+    driver-class-name: org.sqlite.JDBC
+    username: sa
+    password: 
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
